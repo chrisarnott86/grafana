@@ -10,7 +10,7 @@ pipeline {
             steps {
                 container('docker') {
                     sh """
-                    cd packacking/docker/custom
+                    cd packaging/docker/custom
                     docker build --build-arg "GRAFANA_VERSION=latest" --build-arg "GF_INSTALL_IMAGE_RENDERER_PLUGIN=true" --build-arg "GF_INSTALL_PLUGINS=grafana-simple-json-datasource,fifemon-graphql-datasource" -t chrisarnott86/grafana-render:latest -f Dockerfile .
                     """
                 }
