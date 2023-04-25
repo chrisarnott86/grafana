@@ -27,7 +27,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 container('docker') {
-                    sh 'docker push chrisarnott86/chrisarnott86/grafana-render:latest'
+                    sh 'docker push chrisarnott86/grafana-render:latest'
                 }
             }
         }
